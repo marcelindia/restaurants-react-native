@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { RestaurantContext } from "../../App";
+import styles from "../../styles";
 
 function RestaurantCard({ restaurant }) {
   const { setSelectedRestaurant } = useContext(RestaurantContext);
@@ -19,24 +20,5 @@ function RestaurantCard({ restaurant }) {
     </TouchableOpacity>
   );
 }
-
-const styles = StyleSheet.create({
-  card: {
-    width: 350,
-    backgroundColor: "red",
-    marginBottom: 16,
-  },
-
-  cardImage: {
-    width: 350,
-    height: 210,
-  },
-  cardTitle: {
-    fontSize: 28,
-    fontWeight: "600",
-    padding: 4,
-    color: "white",
-  },
-});
 
 export default RestaurantCard;
